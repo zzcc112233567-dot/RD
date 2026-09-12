@@ -531,7 +531,7 @@ void handle_input(Joycon* jc, uint8_t* packet, int len) {
 			average = sum / runarraylength;
 
 			//printf("%i\n", average); //walk 0-1, jog 1-2, run 2-3, sprint 3-4
-			if (average > 0) {
+			if (average > 4) {
 				running = true;
 				if (settings.Runpressesbutton) {
 					jc->buttons |= 1U << 4; //sr = run
